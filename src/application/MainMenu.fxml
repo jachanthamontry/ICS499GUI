@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1280.0" 
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label text="Uber Chess">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#test" text="Start New Game">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" text="Load New Game">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" text="Options">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" />
+   </children>
+</VBox>
