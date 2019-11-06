@@ -48,39 +48,119 @@
       </VBox>
    </right>
    <bottom>
-      <TextArea prefHeight="90.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
+      <Pane>
+         <children>
+            <Label fx:id="playerTurnLabel" contentDisplay="CENTER" layoutX="582.0" layoutY="-4.0" prefHeight="17.0" prefWidth="127.0" text="White Player's Turn" />
+         </children>
+      </Pane>
    </bottom>
    <center>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="700.0">
                <children>
+                  <Pane prefHeight="35.0" prefWidth="700.0" />
                   <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0">
                      <children>
                         <Group>
                            <children>
                               <Pane prefHeight="75.0" prefWidth="75.0">
                                  <children>
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="B8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="C8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="150.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="D8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="225.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="E8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="300.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="F8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="375.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="G8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="450.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle fx:id="H8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="a8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="b8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="c8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="150.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="d8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="225.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="e8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="300.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="f8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="375.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="g8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="450.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="h8" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <ImageView fx:id="rook_black2" fitHeight="50.0" fitWidth="50.0" layoutX="544.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Rook_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="knight_black1" fitHeight="50.0" fitWidth="50.0" layoutX="96.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Knight_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="knight_black2" fitHeight="50.0" fitWidth="50.0" layoutX="471.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Knight_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="bishop_black1" fitHeight="50.0" fitWidth="50.0" layoutX="171.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Bishop_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="bishop_black2" fitHeight="50.0" fitWidth="50.0" layoutX="396.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Bishop_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="king_black" fitHeight="50.0" fitWidth="50.0" layoutX="322.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/King_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="queen_black" fitHeight="50.0" fitWidth="50.0" layoutX="246.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Queen_Black.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </Pane>
                               <Pane prefHeight="75.0" prefWidth="75.0">
                                  <children>
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="75.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="150.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="225.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="300.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="375.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="450.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="525.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="a7" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="b7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="75.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="c7" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="150.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="d7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="225.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="e7" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="300.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="f7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="375.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="g7" arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="450.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <Rectangle fx:id="h7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="525.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <ImageView fx:id="pawn_black3" fitHeight="50.0" fitWidth="50.0" layoutX="168.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black4" fitHeight="50.0" fitWidth="50.0" layoutX="244.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black2" fitHeight="50.0" fitWidth="50.0" layoutX="93.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black5" fitHeight="50.0" fitWidth="50.0" layoutX="318.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black6" fitHeight="50.0" fitWidth="50.0" layoutX="393.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black7" fitHeight="50.0" fitWidth="50.0" layoutX="467.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black8" fitHeight="50.0" fitWidth="50.0" layoutX="546.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_black1" fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/black%20pawn.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </Pane>
                               <Pane prefHeight="75.0" prefWidth="75.0">
@@ -141,9 +221,49 @@
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="375.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="450.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="525.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <ImageView fx:id="pawn_white1" fitHeight="50.0" fitWidth="50.0" layoutX="19.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white2" fitHeight="50.0" fitWidth="50.0" layoutX="94.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white3" fitHeight="50.0" fitWidth="50.0" layoutX="169.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white4" fitHeight="50.0" fitWidth="50.0" layoutX="244.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white5" fitHeight="50.0" fitWidth="50.0" layoutX="319.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white6" fitHeight="50.0" fitWidth="50.0" layoutX="394.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white7" fitHeight="50.0" fitWidth="50.0" layoutX="469.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="pawn_white8" fitHeight="50.0" fitWidth="50.0" layoutX="544.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Pawn_White.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </Pane>
-                              <Pane  prefHeight="75.0" prefWidth="75.0">
+                              <Pane prefHeight="75.0" prefWidth="75.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="75.0" layoutY="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
@@ -153,13 +273,53 @@
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="375.0" layoutY="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="450.0" layoutY="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="525.0" layoutY="525.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                                    <ImageView fx:id="rook_black1" fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Rook_Black.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="rook_white1" fitHeight="50.0" fitWidth="50.0" layoutX="19.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Rook_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="rook_white2" fitHeight="50.0" fitWidth="50.0" layoutX="544.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Rook_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="knight_white1" fitHeight="50.0" fitWidth="50.0" layoutX="94.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Knight_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="knight_white2" fitHeight="50.0" fitWidth="50.0" layoutX="469.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Knight_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="bishop_white1" fitHeight="50.0" fitWidth="50.0" layoutX="169.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Bishop_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="bishop_white2" fitHeight="50.0" fitWidth="50.0" layoutX="394.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Bishop_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="king_white" fitHeight="50.0" fitWidth="50.0" layoutX="322.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/King_White.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="queen_white" fitHeight="50.0" fitWidth="50.0" layoutX="245.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/Queen_White.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </Pane>
-                              <ImageView fx:id="pawn_black1" fitHeight="50.0" fitWidth="50.0" layoutX="16.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../Images/Pawn_Black.png" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </Group>
                      </children>
