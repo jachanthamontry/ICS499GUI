@@ -4,8 +4,11 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
 
@@ -14,6 +17,13 @@ import java.util.ResourceBundle;
 
 public class ChessGameController implements Initializable {
 
+	private boolean firstClick = false;
+    private Node firstClickSpot;
+
+    private boolean secondClick = false;
+    private Node secondClickSpot;
+    
+	
     @FXML
     ImageView pawn_black1, pawn_black2, pawn_black3, pawn_black4, 
     		  pawn_black5, pawn_black6, pawn_black7, pawn_black8,
@@ -36,6 +46,9 @@ public class ChessGameController implements Initializable {
     StackPane stackPane;
     
     @FXML
+    GridPane gridPane;
+    
+    @FXML
     public void returnToMainMenu(ActionEvent event) {
         /*
          * try {
@@ -55,6 +68,32 @@ public class ChessGameController implements Initializable {
     }
 
 
+    @SuppressWarnings("static-access")
+	public void makeMove(MouseEvent event) {
+
+
+        if (!firstClick) {
+            //firstClick = true;
+            firstClickSpot = (Node) event.getSource();
+            
+            System.out.println(firstClickSpot.toString());
+
+            System.out.println(gridPane.getColumnIndex(firstClickSpot));
+            System.out.println(gridPane.getRowIndex(firstClickSpot));
+            
+            
+        }
+        
+        else if (firstClick) {
+            secondClickSpot = (Node) event.getSource();
+            //thing = (GridPane) event.getSource();
+            System.out.println(secondClickSpot.toString());
+            //System.out.println(thing.toString());
+            firstClick = false;
+
+        }
+
+    }
 
 
 
