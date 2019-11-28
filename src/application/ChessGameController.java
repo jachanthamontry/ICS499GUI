@@ -17,7 +17,7 @@ import javafx.scene.shape.Rectangle;
 public class ChessGameController implements Initializable {
 
 	private boolean firstClick = false;
-	private Node firstClickSpot;
+	private ImageView firstClickSpot;
 
 	private boolean secondClick = false;
 	private Node secondClickSpot;
@@ -64,25 +64,22 @@ public class ChessGameController implements Initializable {
 //OLEGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 	@SuppressWarnings("static-access")
 	public void makeMove(MouseEvent event) {
+		try {
+			if (!firstClick) {
+				firstClick = true;
+				firstClickSpot = (ImageView) event.getSource();
 
-		if (!firstClick) {
-			// firstClick = true;
-			firstClickSpot = (Node) event.getSource();
+				System.out.println("First Move");
 
-			System.out.println(firstClickSpot.toString());
-
-			System.out.println(gridPane.getColumnIndex(firstClickSpot));
-			System.out.println(gridPane.getRowIndex(firstClickSpot));
-
-		}
-
-		else if (firstClick && !secondClick) {
-			secondClickSpot = (Node) event.getSource();
-			// thing = (GridPane) event.getSource();
-			System.out.println(secondClickSpot.toString());
-			// System.out.println(thing.toString());
+			} else if (firstClick && !secondClick) {
+				System.out.println("Second Move");
+				secondClickSpot = (Node) event.getSource();
+				gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
+				gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
+				firstClick = false;
+			}
+		} catch (Exception e) {
 			firstClick = false;
-
 		}
 
 	}
