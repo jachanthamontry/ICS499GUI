@@ -61,7 +61,7 @@ public class ChessGameController implements Initializable {
 		System.out.println("it doesnt work yet");
 	}
 
-//OLEGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+//OLEGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 	@SuppressWarnings("static-access")
 	public void makeMove(MouseEvent event) {
 
