@@ -150,7 +150,7 @@ public class ChessGameController implements Initializable {
 		} catch (Exception e) {
 			firstClick = false;
 			System.out.println("Fail");
-			e.printStackTrace();
+
 		}
 
 		if (g.whoseTurn())
