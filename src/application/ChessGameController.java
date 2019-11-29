@@ -123,6 +123,8 @@ public class ChessGameController implements Initializable {
 						System.out.println("Succes");
 						Piece enemy = butn.getPiece();
 						moveIteration = new Move(test, butn);
+						butn.getPiece().madeFirstMove();
+
 						gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
 						gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
 						firstClick = false;
