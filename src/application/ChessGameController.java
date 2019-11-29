@@ -1,8 +1,15 @@
 package application;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import gradleproject1.Board;
+import gradleproject1.BoardButton;
+import gradleproject1.GameState;
+import gradleproject1.Move;
+import gradleproject1.Piece;
+import gradleproject1.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,9 +25,13 @@ public class ChessGameController implements Initializable {
 
 	private boolean firstClick = false;
 	private ImageView firstClickSpot;
-
 	private boolean secondClick = false;
 	private Node secondClickSpot;
+	private BoardButton[][] GameBoard;
+	private GameState g;
+	private static Board b;
+	private ArrayList<BoardButton> moves;
+	private Piece test = null;
 
 	@FXML
 	ImageView pawn_black1, pawn_black2, pawn_black3, pawn_black4, pawn_black5, pawn_black6, pawn_black7, pawn_black8,
@@ -61,32 +72,123 @@ public class ChessGameController implements Initializable {
 		System.out.println("it doesnt work yet");
 	}
 
-//OLEGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 	@SuppressWarnings("static-access")
 	public void makeMove(MouseEvent event) {
+		System.out.println("Click");
+		int x, y, x2, y2;
+
 		try {
 			if (!firstClick) {
+				moves = null;
+				test = null;
+				BoardButton a = null;
 				firstClick = true;
 				firstClickSpot = (ImageView) event.getSource();
+				y = gridPane.getColumnIndex(firstClickSpot);
+				x = gridPane.getRowIndex(firstClickSpot);
+				a = GameBoard[x][y];
+				System.out.println(x + " " + y + "Entered");
+				test = a.getPiece();
+				if (test.isWhite() != g.whoseTurn()) {
 
-				System.out.println("First Move");
+					firstClick = false;
+				}
+
+				moves = test.getMoves(test, GameBoard); // Make sure the moves list isnt' null, would previously 'pass'
+														// your turn
+				for (int ctr = 0; ctr < moves.size(); ctr++)
+					System.out.print(moves.get(ctr).getAbbreviation() + ", ");
+
+				if (moves.size() == 0) {
+					firstClick = false;
+
+				}
+
+				System.out.println("First Move" + firstClick);
 
 			} else if (firstClick && !secondClick) {
+				Move moveIteration = null;
+
 				System.out.println("Second Move");
+
 				secondClickSpot = (Node) event.getSource();
-				gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
-				gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
-				firstClick = false;
+
+				y2 = gridPane.getColumnIndex(secondClickSpot);
+				x2 = gridPane.getRowIndex(secondClickSpot);
+
+				System.out.println(x2 + " " + (y2 + 1) + "Entered");
+				for (BoardButton butn : moves) {
+					System.out.println(+butn.getRow() + " " + butn.getColumn());
+					if (butn.getRow() == x2 && butn.getColumn() == y2 + 1) {
+						System.out.println("Succes");
+						Piece enemy = butn.getPiece();
+						moveIteration = new Move(test, butn);
+						gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
+						gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
+						firstClick = false;
+						g.turn();
+
+						if (moveIteration.getAbbreviation().contains("x")) {
+							System.out.println("Piece captured!");
+							if (enemy.isWhite())
+								System.out.println("White " + enemy.getName() + " captured on square "
+										+ butn.getAbbreviation() + "!");
+							else
+								System.out.println("Black " + enemy.getName() + " captured on square "
+										+ butn.getAbbreviation() + "!");
+						}
+
+					} else {
+						firstClick = false;
+					}
+
+				}
+
 			}
+			b.draw(b);
+
 		} catch (Exception e) {
 			firstClick = false;
+			System.out.println("Fail");
+			e.printStackTrace();
 		}
+
+		if (g.whoseTurn())
+			playerTurnLabel.setText("White Turn");
+		else
+			playerTurnLabel.setText("Black Turn");
 
 	}
 
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
+		g = new GameState();
 
+		try {
+			b = initDefault();
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		GameBoard = b.getGameBoard();
+
+		g.setWhite(b.getWhitePlayer());
+		g.setBlack(b.getBlackPlayer());
+		Move.setGameBoard(b);
+
+	}
+
+	public static Board initDefault() throws Exception {
+
+		Player whitePlayer = new Player(true, false, 3);
+		Player blackPlayer = new Player(false, false, 3);
+		Move.setWhitePlayer(whitePlayer);
+		Move.setBlackPlayer(blackPlayer);
+
+		b = new Board(whitePlayer, blackPlayer);
+
+		b.initBoard();
+		return b;
 	}
 
 }
