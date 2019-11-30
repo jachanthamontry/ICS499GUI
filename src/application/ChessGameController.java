@@ -4,6 +4,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javax.persistence.*;
+
 import gradleproject1.Board;
 import gradleproject1.BoardButton;
 import gradleproject1.GameState;
@@ -197,6 +199,22 @@ public class ChessGameController implements Initializable {
 			playerTurnLabel.setText("Black Turn");
 			currentPlayer = false;
 		}
+	}
+	
+	
+	
+	public void saveGame() {
+		
+		
+		// Open a database connection
+        // (create a new database if it doesn't exist yet):
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("$objectdb/db/p2.odb");
+        EntityManager em = emf.createEntityManager();
+        
+        em.getTransaction().begin();
+        GameDataBase game = new GameDataBase();
+        
+        em.getTransaction().commit();
 	}
 
 	@Override
