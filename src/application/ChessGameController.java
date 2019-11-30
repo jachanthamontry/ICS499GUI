@@ -15,6 +15,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -32,7 +35,7 @@ public class ChessGameController implements Initializable {
 	private static Board b;
 	private ArrayList<BoardButton> moves;
 	private Piece test = null;
-	private Player currentPlayer;
+	private boolean currentPlayer;
 	private boolean capturePiece;
 
 	@FXML
@@ -56,6 +59,9 @@ public class ChessGameController implements Initializable {
 
 	@FXML
 	GridPane gridPane;
+
+	@FXML
+	ListView<ImageView> black_list, white_list;
 
 	@FXML
 	public void returnToMainMenu(ActionEvent event) {
@@ -147,8 +153,13 @@ public class ChessGameController implements Initializable {
 						gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
 						gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
 						if (capturePiece == true) {
-							secondClickSpot.setVisible(false);
 							gridPane.getChildren().remove(secondClickSpot);
+							if (currentPlayer) {
+								black_list.getItems().add((ImageView) secondClickSpot);
+							} else if (!currentPlayer) {
+								white_list.getItems().add((ImageView) secondClickSpot);
+							}
+
 						}
 
 						firstClick = false;
@@ -181,16 +192,49 @@ public class ChessGameController implements Initializable {
 
 		if (g.whoseTurn()) {
 			playerTurnLabel.setText("White Turn");
-			currentPlayer = b.getWhitePlayer();
+			currentPlayer = true;
 		} else {
 			playerTurnLabel.setText("Black Turn");
-			currentPlayer = b.getBlackPlayer();
+			currentPlayer = false;
 		}
 	}
 
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		g = new GameState();
+
+		black_list.setCellFactory(listView -> new ListCell<ImageView>() {
+			private ImageView imageView = new ImageView();
+
+			@Override
+			public void updateItem(ImageView view, boolean empty) {
+				super.updateItem(view, empty);
+				if (empty) {
+					setText(null);
+					setGraphic(null);
+				} else {
+					Image image = view.getImage();
+					imageView.setImage(image);
+					setGraphic(imageView);
+				}
+			}
+		});
+		white_list.setCellFactory(listView -> new ListCell<ImageView>() {
+			private ImageView imageView = new ImageView();
+
+			@Override
+			public void updateItem(ImageView view, boolean empty) {
+				super.updateItem(view, empty);
+				if (empty) {
+					setText(null);
+					setGraphic(null);
+				} else {
+					Image image = view.getImage();
+					imageView.setImage(image);
+					setGraphic(imageView);
+				}
+			}
+		});
 
 		try {
 			b = initDefault();

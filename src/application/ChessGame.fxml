@@ -35,7 +35,7 @@
       <VBox alignment="CENTER">
          <children>
             <Label contentDisplay="CENTER" text="Black Pieces Captured" />
-            <ListView editable="true" prefHeight="578.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="black_list" editable="true" prefHeight="578.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
             <Pane prefHeight="75.0" prefWidth="75.0" />
          </children>
       </VBox>
@@ -44,23 +44,22 @@
       <VBox alignment="CENTER">
          <children>
             <Label text="White Pieces Captured" />
-            <ListView prefHeight="593.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="white_list" prefHeight="593.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </children>
       </VBox>
    </right>
    <bottom>
-      <Pane>
-         <children>
-            <Label fx:id="playerTurnLabel" contentDisplay="CENTER" layoutX="582.0" layoutY="-4.0" prefHeight="17.0" prefWidth="127.0" text="White Player's Turn" />
-         </children>
-      </Pane>
+      <Pane />
    </bottom>
    <center>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="700.0">
                <children>
-                  <Pane prefHeight="35.0" prefWidth="700.0" />
+                  <Pane prefHeight="35.0" prefWidth="700.0">
+                     <children>
+                        <Label fx:id="playerTurnLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="6.0" prefHeight="17.0" prefWidth="127.0" text="White Player's Turn" />
+                     </children></Pane>
                   <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0">
                      <children>
                         <Group />
@@ -165,7 +164,7 @@
                                     <Image url="@../../Images/black%20pawn.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="pawn_black8" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0"	 GridPane.valignment="CENTER">
+                              <ImageView fx:id="pawn_black8" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/black%20pawn.png" />
                                  </image>
@@ -210,7 +209,7 @@
                                     <Image url="@../../Images/Pawn_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="pawn_white6" fitHeight="65.0" fitWidth="65.0" nodeOrientation="INHERIT" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <ImageView fx:id="pawn_white6" fitHeight="65.0" fitWidth="65.0" nodeOrientation="INHERIT" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Pawn_White.png" />
                                  </image>
@@ -230,12 +229,12 @@
                                     <Image url="@../../Images/Pawn_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="king_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER"  GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <ImageView fx:id="king_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/King_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="queen_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="4"  GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                              <ImageView fx:id="queen_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Queen_White.png" />
                                  </image>
@@ -260,22 +259,22 @@
                                     <Image url="@../../Images/Knight_Black.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bishop_white2" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="5"  GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                              <ImageView fx:id="bishop_white2" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Bishop_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bishop_white1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="2"  GridPane.columnIndex="0"  GridPane.valignment="CENTER">
+                              <ImageView fx:id="bishop_white1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Bishop_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="knight_white2" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="6"  GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                              <ImageView fx:id="knight_white2" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Knight_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="knight_white1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="1"  GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                              <ImageView fx:id="knight_white1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Knight_White.png" />
                                  </image>
@@ -285,7 +284,7 @@
                                     <Image url="@../../Images/Rook_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="rook_white1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER"  GridPane.columnIndex="0"  GridPane.rowIndex="0">
+                              <ImageView fx:id="rook_white1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Rook_White.png" />
                                  </image>
