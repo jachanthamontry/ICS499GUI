@@ -32,6 +32,8 @@ public class ChessGameController implements Initializable {
 	private static Board b;
 	private ArrayList<BoardButton> moves;
 	private Piece test = null;
+	private Player currentPlayer;
+	private boolean capturePiece;
 
 	@FXML
 	ImageView pawn_black1, pawn_black2, pawn_black3, pawn_black4, pawn_black5, pawn_black6, pawn_black7, pawn_black8,
@@ -104,14 +106,31 @@ public class ChessGameController implements Initializable {
 
 				}
 
-				System.out.println("First Move" + firstClick);
+				if (test.isWhite() && b.getWhitePlayer().inCheck()) {
+					System.out.println("You're in check!!");
+					if (b.getBlackPlayer().inCheck())
+						System.out.println("Black player in check as well.");
+				} else if (!test.isWhite() && b.getBlackPlayer().inCheck()) {
+					System.out.println("You're in check!!");
+					if (b.getWhitePlayer().inCheck())
+						System.out.println("White player in check as well.");
+				}
 
 			} else if (firstClick && !secondClick) {
+
 				Move moveIteration = null;
 
 				System.out.println("Second Move");
 
-				secondClickSpot = (Node) event.getSource();
+				try {
+
+					secondClickSpot = (ImageView) event.getSource();
+					capturePiece = true;
+				} catch (Exception e) {
+					capturePiece = false;
+					;
+					secondClickSpot = (Node) event.getSource();
+				}
 
 				y2 = gridPane.getColumnIndex(secondClickSpot);
 				x2 = gridPane.getRowIndex(secondClickSpot);
@@ -122,9 +141,14 @@ public class ChessGameController implements Initializable {
 					if (butn.getRow() == x2 && butn.getColumn() == y2 + 1) {
 						System.out.println("Succes");
 						Piece enemy = butn.getPiece();
+
 						moveIteration = new Move(test, butn);
 						butn.getPiece().madeFirstMove();
 
+						if (capturePiece == true) {
+							gridPane.setColumnIndex(secondClickSpot, null);
+							gridPane.setRowIndex(secondClickSpot, null);
+						}
 						gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
 						gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
 						firstClick = false;
@@ -155,11 +179,13 @@ public class ChessGameController implements Initializable {
 
 		}
 
-		if (g.whoseTurn())
+		if (g.whoseTurn()) {
 			playerTurnLabel.setText("White Turn");
-		else
+			currentPlayer = b.getWhitePlayer();
+		} else {
 			playerTurnLabel.setText("Black Turn");
-
+			currentPlayer = b.getBlackPlayer();
+		}
 	}
 
 	@Override
