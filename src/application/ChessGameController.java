@@ -144,13 +144,13 @@ public class ChessGameController implements Initializable {
 
 						moveIteration = new Move(test, butn);
 						butn.getPiece().madeFirstMove();
-
-						if (capturePiece == true) {
-							gridPane.setColumnIndex(secondClickSpot, null);
-							gridPane.setRowIndex(secondClickSpot, null);
-						}
 						gridPane.setColumnIndex(firstClickSpot, gridPane.getColumnIndex(secondClickSpot));
 						gridPane.setRowIndex(firstClickSpot, gridPane.getRowIndex(secondClickSpot));
+						if (capturePiece == true) {
+							secondClickSpot.setVisible(false);
+							gridPane.getChildren().remove(secondClickSpot);
+						}
+
 						firstClick = false;
 						g.turn();
 
