@@ -39,6 +39,8 @@ public class ChessGameController implements Initializable {
 	private Piece test = null;
 	private boolean currentPlayer;
 	private boolean capturePiece;
+	private ArrayList<ImageView> blackPieces;
+	private ArrayList<ImageView> whitePieces;
 
 	@FXML
 	ImageView pawn_black1, pawn_black2, pawn_black3, pawn_black4, pawn_black5, pawn_black6, pawn_black7, pawn_black8,
@@ -205,16 +207,23 @@ public class ChessGameController implements Initializable {
 	
 	public void saveGame() {
 		
+
 		
 		// Open a database connection
-        // (create a new database if it doesn't exist yet):
+         //(create a new database if it doesn't exist yet):
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("$objectdb/db/p2.odb");
         EntityManager em = emf.createEntityManager();
-        
+        System.out.println("1");
         em.getTransaction().begin();
-        GameDataBase game = new GameDataBase();
-        
+        GameDataBase game = new GameDataBase(white_list, black_list);
+        System.out.println("2");
+        em.persist(game);
+        System.out.println("3");
         em.getTransaction().commit();
+		em.close();
+
+		System.out.println("4");
+		
 	}
 
 	@Override
