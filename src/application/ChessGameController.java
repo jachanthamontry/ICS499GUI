@@ -9,7 +9,9 @@ import javax.persistence.*;
 import gradleproject1.Board;
 import gradleproject1.BoardButton;
 import gradleproject1.GameState;
+import gradleproject1.King;
 import gradleproject1.Move;
+import gradleproject1.Pawn;
 import gradleproject1.Piece;
 import gradleproject1.Player;
 import javafx.event.ActionEvent;
@@ -90,6 +92,7 @@ public class ChessGameController implements Initializable {
 		int x, y, x2, y2;
 
 		try {
+			//This if statements handles the first time something is clicked.
 			if (!firstClick) {
 				moves = null;
 				test = null;
@@ -99,8 +102,10 @@ public class ChessGameController implements Initializable {
 				y = gridPane.getColumnIndex(firstClickSpot);
 				x = gridPane.getRowIndex(firstClickSpot);
 				a = GameBoard[x][y];
-				System.out.println(x + " " + y + "Entered");
+				System.out.println("Entered: " + x + " " + y); 
 				test = a.getPiece();
+				
+				//Determines if the piece does not match whose turn it is. 
 				if (test.isWhite() != g.whoseTurn()) {
 
 					firstClick = false;
@@ -125,31 +130,35 @@ public class ChessGameController implements Initializable {
 					if (b.getWhitePlayer().inCheck())
 						System.out.println("White player in check as well.");
 				}
-
+				
+				System.out.println(); //just making it easier to read console.
+				
+			//handles the 2nd item being clicked.
 			} else if (firstClick && !secondClick) {
 
 				Move moveIteration = null;
 
-				System.out.println("Second Move");
+				System.out.println("Now Click Second Move");
 
 				try {
 
 					secondClickSpot = (ImageView) event.getSource();
+					System.out.println("this is secondClickSpot: " + secondClickSpot);
 					capturePiece = true;
 				} catch (Exception e) {
 					capturePiece = false;
-					;
 					secondClickSpot = (Node) event.getSource();
 				}
 
+				//sets the 
 				y2 = gridPane.getColumnIndex(secondClickSpot);
 				x2 = gridPane.getRowIndex(secondClickSpot);
 
-				System.out.println(x2 + " " + (y2 + 1) + "Entered");
+				System.out.println("Entered: " + x2 + " " + (y2 + 1));
 				for (BoardButton butn : moves) {
-					System.out.println(+butn.getRow() + " " + butn.getColumn());
+					//System.out.println(+butn.getRow() + " " + butn.getColumn());
 					if (butn.getRow() == x2 && butn.getColumn() == y2 + 1) {
-						System.out.println("Succes");
+						System.out.println("Success");
 						Piece enemy = butn.getPiece();
 
 						moveIteration = new Move(test, butn);
@@ -163,7 +172,6 @@ public class ChessGameController implements Initializable {
 							} else if (!currentPlayer) {
 								white_list.getItems().add((ImageView) secondClickSpot);
 							}
-
 						}
 
 						firstClick = false;
@@ -178,7 +186,24 @@ public class ChessGameController implements Initializable {
 								System.out.println("Black " + enemy.getName() + " captured on square "
 										+ butn.getAbbreviation() + "!");
 						}
+						
+						//testing a method for check here.
+						
+						//gets updated coordinates for firstClickSpot piece.
+						y2 = gridPane.getColumnIndex(firstClickSpot);
+						x2 = gridPane.getRowIndex(firstClickSpot);
+						moves = test.getMoves(test, GameBoard); // Make sure the moves list isnt' null, would previously 'pass'
 
+						for (int ctr = 0; ctr < moves.size(); ctr++) {
+							if(moves.get(ctr).getPiece() instanceof King) { //checks to see if one of the possible moves is going to land on a king.
+								if(currentPlayer) {
+									System.out.println("black is in check"); //it will print that its in check, but currently doesn't do anything with it.
+									//I think it has to do with the setCheck and stuff in piece.
+								}
+								else 
+									System.out.println("white is in check");
+							}
+						}
 					} else {
 						firstClick = false;
 					}
@@ -186,7 +211,7 @@ public class ChessGameController implements Initializable {
 				}
 
 			}
-			b.draw(b);
+			//b.draw(b);
 
 		} catch (Exception e) {
 			firstClick = false;
@@ -195,10 +220,10 @@ public class ChessGameController implements Initializable {
 		}
 
 		if (g.whoseTurn()) {
-			playerTurnLabel.setText("White Turn");
+			playerTurnLabel.setText("White Player's Turn");
 			currentPlayer = true;
 		} else {
-			playerTurnLabel.setText("Black Turn");
+			playerTurnLabel.setText("Black Player's Turn");
 			currentPlayer = false;
 		}
 	}
