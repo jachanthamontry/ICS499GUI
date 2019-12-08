@@ -1,7 +1,12 @@
 package application;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+
 import javax.persistence.*;
+
+import javafx.scene.control.ListView;
+import javafx.scene.image.ImageView;
 
 @Entity
 public class GameDataBase implements Serializable{
@@ -10,32 +15,44 @@ public class GameDataBase implements Serializable{
 	@Id @GeneratedValue
     private long id;
 
-    private int x;
-    private int y;
+    private ArrayList<ImageView> whitePieces;
+    private ArrayList<ImageView> blackPieces;
+	
+    
+    private ListView<ImageView> capturedWhites;
+    
+    private ListView<ImageView> capturedBlacks;
+    
 
     public GameDataBase() {
     }
 
-    GameDataBase(int x, int y) {
-        this.x = x;
-        this.y = y;
+    GameDataBase(ListView<ImageView> capturedWhites, ListView<ImageView> capturedBlacks) {
+
+        this.capturedWhites = capturedWhites;
+        this.capturedBlacks = capturedBlacks;
+        
     }
 
     public Long getId() {
         return id;
     }
 
-    public int getX() {
-         return x;
-    }
 
-    public int getY() {
-         return y;
-    }
 
-    @Override
+	public ListView<ImageView> getCapturedWhites() {
+		return capturedWhites;
+	}
+
+	public ListView<ImageView> getCapturedBlacks() {
+		return capturedBlacks;
+	}
+
+
+
+	@Override
     public String toString() {
-        return String.format("(%d, %d)", this.x, this.y);
+        return String.format("(%d, %d)", this.capturedWhites, this.capturedWhites);
     }
 	
 }
