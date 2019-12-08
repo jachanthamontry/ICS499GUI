@@ -188,38 +188,43 @@ public class ChessGameAIController implements Initializable {
 	@SuppressWarnings("static-access")
 	public void doAIMove() {
 		int x, y, x2, y2;
+		try {
+			ArrayList<Piece> AiPieceList = new ArrayList<Piece>();
+			AiPieceList = b.getBlackPlayer().getPieceList();
+			ArrayList<Move> AiCurrentPossibleMoves = new ArrayList<Move>();
+			AiCurrentPossibleMoves = b.getAllMoves(AiPieceList, b.getGameBoard());
 
-		ArrayList<Piece> AiPieceList = new ArrayList<Piece>();
-		AiPieceList = b.getBlackPlayer().getPieceList();
-		ArrayList<Move> AiCurrentPossibleMoves = new ArrayList<Move>();
-		AiCurrentPossibleMoves = b.getAllMoves(AiPieceList, b.getGameBoard());
+			Move bestMove = b.getBlackPlayer().bestMoveForLoop(AiCurrentPossibleMoves);
+			int i = bestMove.getPiece().getRow();
+			int j = bestMove.getPiece().getCol();
+			System.out.println("ROW:" + i + " Col:" + j);
+			GetAIpiece(i, j);
 
-		Move bestMove = b.getBlackPlayer().bestMoveForLoop(AiCurrentPossibleMoves);
-		int i = bestMove.getPiece().getRow();
-		int j = bestMove.getPiece().getCol();
-		GetAIpiece(i, j);
+			System.out.println("Best move for black player: " + bestMove.getAbbreviation());
 
-		System.out.println("Best move for black player: " + bestMove.getAbbreviation());
+			i = bestMove.getNew().getRow();
+			j = bestMove.getNew().getColumn() - 1;
+			GetAISecondspot(i, j);
 
-		i = bestMove.getNew().getRow();
-		j = bestMove.getNew().getColumn() - 1;
-		GetAISecondspot(i, j);
+			y = gridPane.getColumnIndex(firstClickSpot);
+			x = gridPane.getRowIndex(firstClickSpot);
+			y2 = gridPane.getColumnIndex(secondClickSpot);
+			x2 = gridPane.getRowIndex(secondClickSpot);
 
-		y = gridPane.getColumnIndex(firstClickSpot);
-		x = gridPane.getRowIndex(firstClickSpot);
-		y2 = gridPane.getColumnIndex(secondClickSpot);
-		x2 = gridPane.getRowIndex(secondClickSpot);
+			a = GameBoard[y][x];
+			test = a.getPiece();
+			System.out.println((x) + " " + (y) + " " + i + " " + j);
+			moves = test.getMoves(test, GameBoard);
+			System.out.println("Doing Move");
+			System.out.println(x + " " + y + " " + i + " " + j);
+			doMove(x, x2, y, y2);
 
-		a = GameBoard[x][y];
-		test = a.getPiece();
-		System.out.println((x) + " " + (y) + " " + i + " " + j);
-		moves = test.getMoves(test, GameBoard);
-		System.out.println("Doing Move");
-		System.out.println(x + " " + y + " " + i + " " + j);
-		doMove(x, x2, y, y2);
+			b.draw(b);
 
-		b.draw(b);
-		doMoveMagic();
+			doMoveMagic();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -231,8 +236,10 @@ public class ChessGameAIController implements Initializable {
 			int column = GridPane.getColumnIndex(child);
 			int row = GridPane.getRowIndex(child);
 
-			if (i == column && j == row) {
+			if (j == column && i == row) {
 				if (child instanceof ImageView) {
+					System.out.println(GridPane.getColumnIndex(child) + "Got IT");
+					System.out.println(GridPane.getRowIndex(child));
 					firstClickSpot = (ImageView) child;
 				}
 			}
@@ -244,18 +251,20 @@ public class ChessGameAIController implements Initializable {
 	private void GetAISecondspot(int i, int j) {
 		capture = false;
 		secondClickSpot = null;
-		System.out.print("Checking");
+		System.out.print("Checking for" + i + " " + j);
 		for (Node child : gridPane.getChildren()) {
 			int column = GridPane.getColumnIndex(child);
 			int row = GridPane.getRowIndex(child);
 			if (i == row && j == column) {
 				if (child instanceof ImageView) {
-					System.out.print("Row " + j + "Col " + i + "IMG ");
+					System.out.println(
+							"Row " + GridPane.getRowIndex(child) + "Col " + GridPane.getColumnIndex(child) + "IMG ");
 					secondClickSpot = (ImageView) child;
 					capturePiece = true;
 					capture = true;
 				} else if (capture == false) {
-					System.out.print("Row" + j + "Col" + i + "Rect ");
+					System.out.println(
+							"Row" + GridPane.getRowIndex(child) + "Col" + GridPane.getColumnIndex(child) + "Rect ");
 					capturePiece = false;
 					secondClickSpot = (Rectangle) child;
 
