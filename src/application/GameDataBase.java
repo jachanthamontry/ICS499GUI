@@ -3,42 +3,41 @@ package application;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 
 @Entity
-public class GameDataBase implements Serializable{
+public class GameDataBase implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	@Id @GeneratedValue
-    private long id;
 
-    private ArrayList<ImageView> whitePieces;
-    private ArrayList<ImageView> blackPieces;
-	
-    
-    private ListView<ImageView> capturedWhites;
-    
-    private ListView<ImageView> capturedBlacks;
-    
+	@Id
+	@GeneratedValue
+	private long id;
 
-    public GameDataBase() {
-    }
+	private ArrayList<ImageView> whitePieces;
+	private ArrayList<ImageView> blackPieces;
 
-    GameDataBase(ListView<ImageView> capturedWhites, ListView<ImageView> capturedBlacks) {
+	private ListView<ImageView> capturedWhites;
 
-        this.capturedWhites = capturedWhites;
-        this.capturedBlacks = capturedBlacks;
-        
-    }
+	private ListView<ImageView> capturedBlacks;
 
-    public Long getId() {
-        return id;
-    }
+	public GameDataBase() {
+	}
 
+	GameDataBase(ListView<ImageView> capturedWhites, ListView<ImageView> capturedBlacks) {
 
+		this.capturedWhites = capturedWhites;
+		this.capturedBlacks = capturedBlacks;
+
+	}
+
+	public Long getId() {
+		return id;
+	}
 
 	public ListView<ImageView> getCapturedWhites() {
 		return capturedWhites;
@@ -48,11 +47,9 @@ public class GameDataBase implements Serializable{
 		return capturedBlacks;
 	}
 
-
-
 	@Override
-    public String toString() {
-        return String.format("(%d, %d)", this.capturedWhites, this.capturedWhites);
-    }
-	
+	public String toString() {
+		return String.format("(%d, %d)", this.capturedWhites, this.capturedWhites);
+	}
+
 }
