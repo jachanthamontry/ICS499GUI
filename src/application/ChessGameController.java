@@ -87,7 +87,7 @@ public class ChessGameController implements Initializable {
 	public void makeMove(MouseEvent event) {
 		System.out.println("Click");
 		int x, y, x2, y2;
-		b.draw(b);
+
 		try {
 			// This if statements handles the first time something is clicked.
 			if (!firstClick) {
@@ -99,8 +99,7 @@ public class ChessGameController implements Initializable {
 				y = gridPane.getColumnIndex(firstClickSpot);
 				x = gridPane.getRowIndex(firstClickSpot);
 				a = GameBoard[x][y];
-				System.out.println(a.getColumn() + "  ROW: " + a.getRow());
-				System.out.println("Entered: " + y + " " + x);
+				System.out.println("Entered: " + x + " " + y);
 				test = a.getPiece();
 
 				// Determines if the piece does not match whose turn it is.
@@ -108,7 +107,7 @@ public class ChessGameController implements Initializable {
 
 					firstClick = false;
 				}
-				System.out.println("Seting up " + test.getCol() + " " + test.getRow());
+
 				moves = test.getMoves(test, GameBoard); // Make sure the moves list isnt' null, would previously 'pass'
 														// your turn
 				for (int ctr = 0; ctr < moves.size(); ctr++)
@@ -152,10 +151,9 @@ public class ChessGameController implements Initializable {
 				y2 = gridPane.getColumnIndex(secondClickSpot);
 				x2 = gridPane.getRowIndex(secondClickSpot);
 
-				System.out.println("Entered: " + (y2) + " " + (x2));
-
+				System.out.println("Entered: " + x2 + " " + (y2 + 1));
 				for (BoardButton butn : moves) {
-					System.out.println("Checking for " + (butn.getColumn()) + " " + butn.getRow());
+					// System.out.println(+butn.getRow() + " " + butn.getColumn());
 					if (butn.getRow() == x2 && butn.getColumn() == y2 + 1) {
 						System.out.println("Success");
 						Piece enemy = butn.getPiece();
@@ -172,7 +170,7 @@ public class ChessGameController implements Initializable {
 								white_list.getItems().add((ImageView) secondClickSpot);
 							}
 						}
-						b.draw(b);
+
 						firstClick = false;
 						g.turn();
 

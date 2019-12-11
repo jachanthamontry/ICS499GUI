@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
@@ -96,70 +95,70 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f4f4" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="BASELINE" />
-                              <Rectangle fx:id="g7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="h7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="e7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="f7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="c7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="d7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="a7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="b7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-                              <Rectangle fx:id="h8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="g8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="f8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="e8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="d8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="c8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="b8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                              <Rectangle fx:id="a8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="BASELINE" />
+                              <Rectangle fx:id="g7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="h7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="e7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="f7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="c7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="d7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="a7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="b7" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                              <Rectangle fx:id="h8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="g8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="f8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="e8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="d8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="c8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="b8" arcHeight="5.0" arcWidth="5.0" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                              <Rectangle fx:id="a8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" onMouseClicked="#makeMove" stroke="BLACK" strokeType="INSIDE" width="75.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
                               <ImageView fx:id="pawn_black1" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/black%20pawn.png" />
@@ -240,12 +239,12 @@
                                     <Image url="@../../Images/Pawn_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="king_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <ImageView fx:id="king_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/King_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="queen_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <ImageView fx:id="queen_white" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Queen_White.png" />
                                  </image>
@@ -255,7 +254,7 @@
                                     <Image url="@../../Images/Rook_Black.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="queen_black" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <ImageView fx:id="queen_black" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Queen_Black.png" />
                                  </image>
@@ -280,7 +279,7 @@
                                     <Image url="@../../Images/Bishop_White.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="knight_white2" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                              <ImageView fx:id="knight_white2" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/Knight_White.png" />
                                  </image>
@@ -315,7 +314,7 @@
                                     <Image url="@../../Images/Bishop_Black.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="king_black" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <ImageView fx:id="king_black" fitHeight="65.0" fitWidth="65.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Images/King_Black.png" />
                                  </image>
